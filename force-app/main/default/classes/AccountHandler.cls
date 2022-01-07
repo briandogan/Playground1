@@ -12,7 +12,7 @@ public class AccountHandler {
         catch (DmlException e) {
             System.debug('A DML exception has occurred: ' + e.getMessage());
             return NULL;
-            // Test 1
+            // Test 
         }
     }
 }
