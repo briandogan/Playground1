@@ -1,0 +1,20 @@
+<aura:component 
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId" 
+                access="global" 
+                controller="AuraApexController">             
+        <aura:attribute name="parentVar" type="String" default="Parent value"/>
+        <div class="slds-box slds-theme_default">   
+            <h1><b>This is Aura Component</b></h1>
+            <p><b>Parent Comp Var: </b>{!v.parentVar}</p>
+            <lightning:input  
+                name="input1" 
+                label="Enter some text" 
+                value="{!v.parentVar}"/>
+            <lightning:button 
+                label="Call Apex" 
+                title="Call Apex" 
+                onclick="{!c.myAction}"/>
+        
+            <c:MyFirstAuraChild childVar="{!v.parentVar}"></c:MyFirstAuraChild>
+    </div> 
+</aura:component>

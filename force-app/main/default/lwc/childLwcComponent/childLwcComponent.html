@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title={productName}>
+        <p class="slds-p-horizontal_small">
+            Product Code: {productCode}
+            Lead ID From Platform Event: {leadId}
+            <img src={imageSrc}/>
+            </br>            
+        </p>
+        <h2>${productPrice}</h2>
+        <p slot="footer">
+            <lightning-button 
+                variant="brand" 
+                label="Buy" 
+                title="Primary action" 
+                onclick={handleClick} 
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </p>
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="childVar" type="String" default="child value"/>
+	<h1><b>Child Comp Var: </b>{!v.childVar}</h1>
+    
+    <lightning:input 
+                     name="input1" 
+                     label="Enter some text" 
+                     value="{!v.childVar}"/>
+</aura:component>

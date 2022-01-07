@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title="Payment">
+        <div class="slds-p-horizontal_small">
+            Product Name: {productName} <br>
+            Product Code: {productCode} <br>
+            <lightning-input type="text" label="Card Number" placeholder="1111-2222-3333-44444"></lightning-input>
+            <lightning-input type="text" label="Name on Card"></lightning-input>
+            <lightning-input type="text" label="Expiry Date" placeholder="MM/DD"></lightning-input>
+            <lightning-input type="text" label="CVV" placeholder="XXX"></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button 
+                variant="brand" 
+                label="Make Payment" 
+                title="Primary action" 
+                onclick={handleClick} 
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

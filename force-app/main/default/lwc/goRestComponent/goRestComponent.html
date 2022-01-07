@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  title="All User">
+        
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="email" label="Email address" value={email} onblur={handleEmailInput}></lightning-input>
+            <lightning-button label="New User" slot="actions" onclick={handleSave}></lightning-button>
+            <template if:true={allUsers}>
+                <table>
+                <template for:each={allUsers.data} for:item='item'>
+                    <tr  key={item.id}>
+                        <td> {item.name}</td>
+                        <td><lightning-formatted-email 
+                            value={item.email} 
+                            ></lightning-formatted-email></td>                
+                    </tr>
+                </template>
+            </table>
+            </template>
+        </p>
+        <p slot="footer">            
+        </p>
+    </lightning-card>
+</template>

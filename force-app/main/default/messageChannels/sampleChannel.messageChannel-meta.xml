@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel>
+    <masterLabel>sampleChannel</masterLabel>
+    <isExposed>true</isExposed>
+
+    <description>This is a channel which is used by LWC component to send data.</description>
+    <!-- Am creating two fields that will be eventually used to send data -->
+    <lightningMessageFields>
+        <description>This is the Id of the record</description>
+        <fieldName>productCode</fieldName>
+    </lightningMessageFields>
+</LightningMessageChannel>

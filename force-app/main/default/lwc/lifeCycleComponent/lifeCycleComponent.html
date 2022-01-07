@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  title="LIFE CYCLE ">
+        <div class="slds-p-horizontal_small">
+            {selectedIndex}
+            <template if:true={showChild}>
+                <c-child-life-cycle-component></c-child-life-cycle-component>
+            </template>
+        </div>
+        <div slot="footer">
+            <lightning-button 
+                variant="brand" 
+                label="Next" 
+                title="Primary action" 
+                onclick={handleClick} 
+                class="slds-m-left_x-small"
+            ></lightning-button>
+            <lightning-button 
+                variant="brand" 
+                label="Show/Hide Child" 
+                title="Primary action" 
+                onclick={handleView} 
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

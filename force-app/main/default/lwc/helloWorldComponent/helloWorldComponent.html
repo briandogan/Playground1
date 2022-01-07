@@ -1,0 +1,53 @@
+<template>
+    <lightning-card  title="New LWC Component"><!-- On VF its - {!variableName}-->
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">
+            {bodyText}<br/><br/>
+            {bodyTextNew}<br/><br/>
+            {bodyTextGet}<br/><br/>
+            {bodyTextWIRE.data}<br/><br/>
+            {bodyTextIMPERATIVE}<br/><br/>            
+            <b>Selected Values are: {selectedValues} </b>
+
+            <template if:true={showDetails}>
+                <div class="slds-m-vertical_medium">
+                    Details about the record. Details about the record. Details about the record. Details about the record. 
+                </div>
+            </template>
+
+            <template if:false={showDetails}>
+                <div class="slds-m-vertical_medium">
+                    Click to see details
+                </div>
+            </template>
+        </p>
+        <p slot="footer">
+            <lightning-button 
+                variant="brand" 
+                label="Show Details" 
+                title="This button Show the details." 
+                onclick={handleClick} 
+                class="slds-m-left_x-small"
+            ></lightning-button>
+
+            <lightning-button 
+            variant="brand" 
+            label="Imperative Call" 
+            title="This button calls APEX imperatively." 
+            onclick={handleImperativeClick} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+
+            <lightning-checkbox-group 
+                name="Checkbox Group"
+                label="Detail Selection"
+                options={options}
+                value={value}
+                onchange={handleChange}
+            ></lightning-checkbox-group>              
+        </p>
+    </lightning-card>
+</template>
+
+<!--IN VisualForce it is {!....} -->
+<!--IN LWC it is {....} -->
